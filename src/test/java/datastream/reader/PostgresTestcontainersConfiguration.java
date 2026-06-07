@@ -1,21 +1,12 @@
 package datastream.reader;
 
 import org.springframework.boot.test.context.TestConfiguration;
-import org.springframework.boot.testcontainers.context.ImportTestcontainers;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.context.annotation.Bean;
 import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.kafka.KafkaContainer;
-import org.testcontainers.utility.DockerImageName;
 
 @TestConfiguration(proxyBeanMethods = false)
-public class TestcontainersConfiguration implements TestContainers {
-
-    @Bean
-    @ServiceConnection
-    KafkaContainer kafkaContainer() {
-        return kafkaContainer;
-    }
+public class PostgresTestcontainersConfiguration implements TestContainers {
 
     @Bean
     @ServiceConnection
